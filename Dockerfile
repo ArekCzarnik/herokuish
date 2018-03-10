@@ -9,6 +9,7 @@ RUN apt-get update -qq \
     --allow-remove-essential \
     --allow-change-held-packages \
     dist-upgrade \
+ && apt-get install -y openjdk-8-jdk-headless \
  && apt-get clean \
  && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* /var/tmp/*
 RUN curl "https://github.com/gliderlabs/herokuish/releases/download/v0.3.35/herokuish_0.3.35_linux_x86_64.tgz" \
